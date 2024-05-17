@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 
 public class iOSApp {
 
-    String userName = System.getenv("LT_USERNAME") == null ? "username" : System.getenv("LT_USERNAME"); //Add username here
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
+    String userName = System.getenv("LT_USERNAME") == null ? "sunilr" : System.getenv("LT_USERNAME"); //Add username here
+    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LtQPqIWXiN4kHjRSQ9juzDmQZV7tpbssbvyEJ13JPS4QfhGduU" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
     String app_id = System.getenv("LT_APP_ID") == null ? "lt://proverbial-ios" : System.getenv("LT_APP_ID");      //Enter your LambdaTest App ID at the place of lt://proverbial-android
     String grid_url = System.getenv("LT_GRID_URL") == null ? "mobile-hub.lambdatest.com" : System.getenv("LT_GRID_URL");
 
@@ -30,18 +30,18 @@ String file=System.getenv("LT_BUILD_NAME");
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("build", "testbuild");
             
-            capabilities.setCapability("name", platform + " " + device + " " + version);
-            capabilities.setCapability("deviceName", "iPad 10.9 (2022)");
-            capabilities.setCapability("platformVersion", "16");
+            capabilities.setCapability("name", "Testname");
+            capabilities.setCapability("deviceName", "*");
+            capabilities.setCapability("platformVersion", "*");
             capabilities.setCapability("platformName", "ios");
             capabilities.setCapability("isRealMobile", true);
             capabilities.setCapability("app", "lt://APP1016025931715945351094180"); //Enter your app url
-            capabilities.setCapability("network", false);
-            capabilities.setCapability("visual", true);
+            // capabilities.setCapability("network", false);
+            // capabilities.setCapability("visual", true);
             // capabilities.setCapability("devicelog", true);
             //capabilities.setCapability("geoLocation", "HK");
 
-            String hub = "https://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
+            String hub = "http://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
             
             driver = new AppiumDriver(new URL(hub), capabilities);
 
