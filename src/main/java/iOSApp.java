@@ -26,8 +26,10 @@ public class iOSApp {
     public void iOSApp1(String device, String version, String platform) {
 
         try {
+String file=System.getenv("LT_BUILD_NAME");
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build", System.getenv);
+            capabilities.setCapability("build", file);
+            
             capabilities.setCapability("name", platform + " " + device + " " + version);
             capabilities.setCapability("deviceName", device);
             capabilities.setCapability("platformVersion", version);
