@@ -18,7 +18,7 @@ stages:
             # tunnelOptions: '{"tunnelName": "ABC"}'
       # - script: |
       #     mvn clean install -DskipTests
-      - script: "mvn clean test -P ios-single"
+      - script: "mvn clean test -P ios-parallel"
         displayName: "Command Line Script"
 # - task: LambdatestResults@1
         
