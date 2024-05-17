@@ -19,4 +19,86 @@
             <class name="iOSApp"/>
         </classes>
     </test>
+
+        <test name="iOSApp 3">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 4">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 5">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 6">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 7">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 8">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 9">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 10">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 11">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+        <test name="iOSApp 12">
+        <parameter name="version" value="15"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="device" value="iPhone.*"/>
+        <classes>
+            <class name="iOSApp"/>
+        </classes>
+    </test>
+    
 </suite>
