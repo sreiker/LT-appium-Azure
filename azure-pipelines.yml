@@ -1,0 +1,30 @@
+trigger:
+- main
+
+pool:
+  MylocalPool
+  #vmImage: ubuntu-latest
+  #MylocalPool
+
+stages:
+- stage: BuildAndTest
+  jobs:
+  - job: BuildAndTestJob
+    steps:
+      - task: configuration@1
+        inputs:
+            connection: sunil-test
+            # isTunnelActivate: true
+            # tunnelOptions: '{"tunnelName": "ABC"}'
+      - script: |
+          mvn clean install -DskipTests
+      - script: " mvn test -P ios-single"
+        displayName: "Command Line Script"
+# - task: LambdatestResults@1
+        
+# - stage: LambdatestResults
+#   jobs:
+#   - job: LambdatestResultsJob
+#     steps:
+#       - script: |
+#           echo "Hello"
