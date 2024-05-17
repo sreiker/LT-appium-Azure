@@ -41,7 +41,8 @@ String file=System.getenv("LT_BUILD_NAME");
             capabilities.setCapability("devicelog", true);
             //capabilities.setCapability("geoLocation", "HK");
 
-            String hub = "http://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
+            String hub = "https://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
+            
             driver = new AppiumDriver(new URL(hub), capabilities);
 
             WebDriverWait Wait = new WebDriverWait(driver, 30);
