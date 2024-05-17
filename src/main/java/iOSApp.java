@@ -28,17 +28,17 @@ public class iOSApp {
         try {
 String file=System.getenv("LT_BUILD_NAME");
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build", file);
+            capabilities.setCapability("build", "testbuild");
             
             capabilities.setCapability("name", platform + " " + device + " " + version);
-            capabilities.setCapability("deviceName", device);
-            capabilities.setCapability("platformVersion", version);
-            capabilities.setCapability("platformName", platform);
+            capabilities.setCapability("deviceName", "iPad 10.9 (2022)");
+            capabilities.setCapability("platformVersion", "16");
+            capabilities.setCapability("platformName", "ios");
             capabilities.setCapability("isRealMobile", true);
-            capabilities.setCapability("app", "lt://APP1016043281712320647497358"); //Enter your app url
+            capabilities.setCapability("app", "lt://APP1016025931715945351094180"); //Enter your app url
             capabilities.setCapability("network", false);
             capabilities.setCapability("visual", true);
-            capabilities.setCapability("devicelog", true);
+            // capabilities.setCapability("devicelog", true);
             //capabilities.setCapability("geoLocation", "HK");
 
             String hub = "https://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
