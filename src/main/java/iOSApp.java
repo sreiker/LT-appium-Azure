@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
+import java.util.HashMap;
 
 import org.testng.annotations.Test;
 
@@ -26,20 +27,30 @@ public class iOSApp {
     public void iOSApp1(String device, String version, String platform) {
 
         try {
-String file=System.getenv("LT_BUILD_NAME");
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build", "testbuild");
+// String file=System.getenv("LT_BUILD_NAME");
+            // DesiredCapabilities capabilities = new DesiredCapabilities();
+            // capabilities.setCapability("build", "testbuild");
             
-            capabilities.setCapability("name", "Testname");
-            capabilities.setCapability("deviceName", "*");
-            capabilities.setCapability("platformVersion", "*");
-            capabilities.setCapability("platformName", "ios");
-            capabilities.setCapability("isRealMobile", true);
-            capabilities.setCapability("app", "lt://APP1016025931715945351094180"); //Enter your app url
+            // capabilities.setCapability("name", "Testname");
+            // capabilities.setCapability("deviceName", "*");
+            // capabilities.setCapability("platformVersion", "*");
+            // capabilities.setCapability("platformName", "ios");
+            // capabilities.setCapability("isRealMobile", true);
+            // capabilities.setCapability("app", "lt://APP1016025931715945351094180"); //Enter your app url
             // capabilities.setCapability("network", false);
             // capabilities.setCapability("visual", true);
             // capabilities.setCapability("devicelog", true);
             //capabilities.setCapability("geoLocation", "HK");
+
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("w3c", true);
+ltOptions.put("platformName", "ios");
+ltOptions.put("deviceName", "iPhone 15");
+ltOptions.put("platformVersion", "17");
+ltOptions.put("app", "lt://APP1016025931715945351094180");
+ltOptions.put("isRealMobile", true);
+capabilities.setCapability("lt:options", ltOptions);
 
             String hub = "http://" + "sunilr" + ":" + "LtQPqIWXiN4kHjRSQ9juzDmQZV7tpbssbvyEJ13JPS4QfhGduU" + "@" + "mobile-hub.lambdatest.com" + "/wd/hub";
             
