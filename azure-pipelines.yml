@@ -16,8 +16,8 @@ stages:
             connection: sunil-test
             # isTunnelActivate: true
             # tunnelOptions: '{"tunnelName": "ABC"}'
-      - script: |
-          mvn clean install -DskipTests
+      # - script: |
+      #     mvn clean install -DskipTests
       - script: " mvn test -P ios-single"
         displayName: "Command Line Script"
 # - task: LambdatestResults@1
