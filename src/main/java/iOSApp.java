@@ -27,7 +27,7 @@ public class iOSApp {
     public void iOSApp1(String device, String version, String platform) {
 
         try {
-// String file=System.getenv("LT_BUILD_NAME");
+String file=System.getenv("LT_BUILD_NAME");
             // DesiredCapabilities capabilities = new DesiredCapabilities();
             // capabilities.setCapability("build", "testbuild");
             
@@ -45,6 +45,7 @@ public class iOSApp {
             DesiredCapabilities capabilities = new DesiredCapabilities();
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 ltOptions.put("w3c", true);
+ltOptions.put("build", file);
 ltOptions.put("platformName", "ios");
 ltOptions.put("deviceName", "iPhone 15");
 ltOptions.put("platformVersion", "17");
