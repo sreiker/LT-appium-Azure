@@ -27,7 +27,7 @@ public class iOSApp {
 
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build", "Java TestNG");
+            capabilities.setCapability("build", System.getenv);
             capabilities.setCapability("name", platform + " " + device + " " + version);
             capabilities.setCapability("deviceName", device);
             capabilities.setCapability("platformVersion", version);
@@ -39,7 +39,7 @@ public class iOSApp {
             capabilities.setCapability("devicelog", true);
             //capabilities.setCapability("geoLocation", "HK");
 
-            String hub = "https://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
+            String hub = "http://" + userName + ":" + accessKey + "@" + grid_url + "/wd/hub";
             driver = new AppiumDriver(new URL(hub), capabilities);
 
             WebDriverWait Wait = new WebDriverWait(driver, 30);
