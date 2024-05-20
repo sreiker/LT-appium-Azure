@@ -20,7 +20,7 @@ stages:
       #     mvn clean install -DskipTests
       - script: "mvn clean test -P ios-parallel"
         displayName: "Command Line Script"
-      - task: LambdatestResults@1
+      # - task: LambdatestResults@1
         
 # - stage: LambdatestResults
 #   jobs:
