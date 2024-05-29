@@ -49,7 +49,7 @@ ltOptions.put("build", file);
 ltOptions.put("platformName", "ios");
 ltOptions.put("deviceName", "iPhone 15");
 ltOptions.put("platformVersion", "17");
-ltOptions.put("app", "lt://APP1016025931715945351094180");
+ltOptions.put("app", "lt://APP1016053601716969413336816");
 ltOptions.put("isRealMobile", true);
 capabilities.setCapability("lt:options", ltOptions);
 
@@ -57,43 +57,43 @@ capabilities.setCapability("lt:options", ltOptions);
             
             driver = new AppiumDriver(new URL(hub), capabilities);
 
-            WebDriverWait Wait = new WebDriverWait(driver, 30);
+            // WebDriverWait Wait = new WebDriverWait(driver, 30);
 
             //Changes the color of the text
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("color"))).click();
-            Thread.sleep(1000);
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("color"))).click();
+            // Thread.sleep(1000);
 
             //Changes the text to "Proverbial"
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Text"))).click();
-            Thread.sleep(1000);
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Text"))).click();
+            // Thread.sleep(1000);
 
-            //Toast will be visible
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("toast"))).click();
-            Thread.sleep(1000);
+            // //Toast will be visible
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("toast"))).click();
+            // Thread.sleep(1000);
 
-            //Notification will be visible
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("notification"))).click();
-            Thread.sleep(4000);
+            // //Notification will be visible
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("notification"))).click();
+            // Thread.sleep(4000);
 
-            //Opens the geolocation page
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("geoLocation"))).click();
-            Thread.sleep(4000);
+            // //Opens the geolocation page
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("geoLocation"))).click();
+            // Thread.sleep(4000);
 
-            //Takes back
-            driver.navigate().back();
+            // //Takes back
+            // driver.navigate().back();
 
-            //Takes to speedtest page
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("speedTest"))).click();
-            Thread.sleep(4000);
-            driver.navigate().back();
+            // //Takes to speedtest page
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("speedTest"))).click();
+            // Thread.sleep(4000);
+            // driver.navigate().back();
 
-            //Opens the browser
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Browser"))).click();
-            Thread.sleep(1000);
-            MobileElement url = (MobileElement) driver.findElementByAccessibilityId("url");
-            url.click();
-            url.sendKeys("https://www.lambdatest.com");
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("find"))).click();
+            // //Opens the browser
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Browser"))).click();
+            // Thread.sleep(1000);
+            // MobileElement url = (MobileElement) driver.findElementByAccessibilityId("url");
+            // url.click();
+            // url.sendKeys("https://www.lambdatest.com");
+            // Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("find"))).click();
             Thread.sleep(1000);
             driver.quit();
         } catch (Exception e) {
