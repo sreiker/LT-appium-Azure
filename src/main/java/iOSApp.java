@@ -57,6 +57,7 @@ capabilities.setCapability("lt:options", ltOptions);
             
             driver = new AppiumDriver(new URL(hub), capabilities);
 
+  driver.activateApp("com.greystar.living");
             // WebDriverWait Wait = new WebDriverWait(driver, 30);
 
             //Changes the color of the text
