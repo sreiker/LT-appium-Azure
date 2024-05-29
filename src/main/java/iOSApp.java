@@ -93,7 +93,7 @@ capabilities.setCapability("queueTimeout", 600);
             driver = new AppiumDriver(new URL(hub), capabilities);
 
 driver.queryAppState("com.greystar.living");
-driver.launchApp();
+// driver.launchApp();
 driver.rotate(ScreenOrientation.PORTRAIT);
 
 Thread.sleep(7000);
