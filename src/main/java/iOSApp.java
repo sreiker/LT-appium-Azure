@@ -95,6 +95,8 @@ capabilities.setCapability("queueTimeout", 600);
 driver.queryAppState("com.greystar.living");
 driver.launchApp();
 driver.rotate(ScreenOrientation.PORTRAIT);
+
+Thread.sleep(7000);
   // driver.activateApp("com.greystar.living");
             // WebDriverWait Wait = new WebDriverWait(driver, 30);
 
